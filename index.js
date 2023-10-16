@@ -10,8 +10,8 @@ const getPlayerOfTheMatchBySeason = require('./src/server/6-player-Of-The-Match-
 const calculateStrikeRateByDhoni = require('./src/server/7-strike-rate-by-Dhoni');
 const getHighestDismissals = require('./src/server/8-highest-dismissals');
 const findBestEconomyInSuperOvers = require('./src/server/9-best-economy-in-super-overs');
-const filePath_match = '/home/saket10/Documents/mountblue/Project_IPL/src/data/matches.csv';
-const filePath_delivery = '/home/saket10/Documents/mountblue/Project_IPL/src/data/deliveries.csv';
+const filePath_match = './src/data/matches.csv';
+const filePath_delivery = './src/data/deliveries.csv';
 const matchesData = [];
 fs.createReadStream(filePath_match)
   .pipe(csv())
@@ -38,15 +38,15 @@ fs.createReadStream(filePath_match)
         const result8 = getHighestDismissals(deliveriesData);
         const result7 = findBestEconomyInSuperOvers(deliveriesData);
 
-        fs.writeFileSync('/home/saket10/Documents/mountblue/Project_IPL/src/public/output/matchesPerYear.json', JSON.stringify(result1, null, 2));
-        fs.writeFileSync('/home/saket10/Documents/mountblue/Project_IPL/src/public/output/matchesWonPerTeamPerYear.json', JSON.stringify(result2, null, 2));
-        fs.writeFileSync('/home/saket10/Documents/mountblue/Project_IPL/src/public/output/extraRunsIn2016.json', JSON.stringify(result3, null, 2));
-        fs.writeFileSync('/home/saket10/Documents/mountblue/Project_IPL/src/public/output/top10EconomicalBowlers2015.json', JSON.stringify(result4, null, 2));
-        fs.writeFileSync('/home/saket10/Documents/mountblue/Project_IPL/src/public/output/tossWinnerMatchWinner.json', JSON.stringify(result5, null, 2));
-        fs.writeFileSync('/home/saket10/Documents/mountblue/Project_IPL/src/public/output/playerOfTheMatchBySeason.json', JSON.stringify(result6, null, 2));
-        fs.writeFileSync('/home/saket10/Documents/mountblue/Project_IPL/src/public/output/strikeRateByDhoni.json', JSON.stringify(result7_Dhoni, null, 2));
-        fs.writeFileSync('/home/saket10/Documents/mountblue/Project_IPL/src/public/output/highestDismissals.json', JSON.stringify(result8, null, 2));
-        fs.writeFileSync('/home/saket10/Documents/mountblue/Project_IPL/src/public/output/bestEconomyInSuperOvers.json', JSON.stringify(result7, null, 2));
+        fs.writeFileSync('./src/public/output/matchesPerYear.json', JSON.stringify(result1, null, 2));
+        fs.writeFileSync('./src/public/output/matchesWonPerTeamPerYear.json', JSON.stringify(result2, null, 2));
+        fs.writeFileSync('./src/public/output/extraRunsIn2016.json', JSON.stringify(result3, null, 2));
+        fs.writeFileSync('./src/public/output/top10EconomicalBowlers2015.json', JSON.stringify(result4, null, 2));
+        fs.writeFileSync('./src/public/output/tossWinnerMatchWinner.json', JSON.stringify(result5, null, 2));
+        fs.writeFileSync('./src/public/output/playerOfTheMatchBySeason.json', JSON.stringify(result6, null, 2));
+        fs.writeFileSync('./src/public/output/strikeRateByDhoni.json', JSON.stringify(result7_Dhoni, null, 2));
+        fs.writeFileSync('./src/public/output/highestDismissals.json', JSON.stringify(result8, null, 2));
+        fs.writeFileSync('./src/public/output/bestEconomyInSuperOvers.json', JSON.stringify(result7, null, 2));
 
 
         console.log('Matches per year data has been generated and saved to public/output/matchesPerYear.json');
