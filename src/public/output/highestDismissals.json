@@ -1,4 +1,7 @@
 {
-  "mostDismissed": "MS Dhoni dismissed by Z Khan",
+  "mostDismissed": [
+    "MS Dhoni dismissed by Z Khan",
+    "MS Dhoni dismissed by PP Ojha"
+  ],
   "maxDismissals": 7
 }

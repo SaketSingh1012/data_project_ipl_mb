@@ -1,8 +1,6 @@
-const fs = require('fs');
-const csv = require('csv-parser');
-
 function getHighestDismissals(data) {
   const highestDismissals = {};
+  let maxDismissals = 0;
 
   for (const delivery of data) {
     const dismissedPlayer = delivery.player_dismissed;
@@ -15,21 +13,19 @@ function getHighestDismissals(data) {
       } else {
         highestDismissals[key] = 1;
       }
+
+      if (highestDismissals[key] > maxDismissals) {
+        maxDismissals = highestDismissals[key];
+      }
     }
   }
 
-
-  let maxDismissals = 0;
-  let mostDismissed = '';
-
-  for (const key in highestDismissals) {
-    if (highestDismissals[key] > maxDismissals) {
-      maxDismissals = highestDismissals[key];
-      mostDismissed = key;
-    }
-  }
+  const mostDismissed = Object.keys(highestDismissals).filter(
+    (key) => highestDismissals[key] === maxDismissals
+  );
 
   return { mostDismissed, maxDismissals };
 }
+
 
 module.exports = getHighestDismissals;
