@@ -1,4 +1,4 @@
-function calculateStrikeRateByDhoni(deliveriesData, matchesData) {
+function calculateStrikeRateByBatsman(deliveriesData, matchesData) {
   const strikeRateBySeason = {};
 
   deliveriesData.forEach((delivery) => {
@@ -34,4 +34,4 @@ function calculateStrikeRateByDhoni(deliveriesData, matchesData) {
   return result;
 }
 
-module.exports = calculateStrikeRateByDhoni;
+module.exports = calculateStrikeRateByBatsman;

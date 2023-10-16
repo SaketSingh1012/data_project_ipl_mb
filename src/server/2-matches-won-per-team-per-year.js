@@ -16,4 +16,5 @@ function calculateMatchesWonPerTeamPerYear(data) {
   });
   return results;
 }
+
 module.exports = calculateMatchesWonPerTeamPerYear;

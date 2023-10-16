@@ -1,4 +1,4 @@
-const calculateStrikeRateByDhoni = require('../src/server/7-strike-rate-by-Dhoni');
+const calculateStrikeRateByBatsman = require('../src/server/7-strike-rate-by-batsman');
 
 const matchesData = [
   { id: '1', season: '2008' },
@@ -15,7 +15,7 @@ const deliveriesData = [
 
 test('Calculate strike rate for a particular player', () => {
   const playerName = 'MS Dhoni';
-  const result = calculateStrikeRateByDhoni(deliveriesData, matchesData);
+  const result = calculateStrikeRateByBatsman(deliveriesData, matchesData);
   const expectedData = {
     '2008': 500.00,
     '2009': 100.00,
