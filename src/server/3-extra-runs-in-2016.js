@@ -1,7 +1,15 @@
-function calculateExtraRunsIn2016(data) {
-  const extraRuns = {}; 
-  data.forEach((row) => {
-    if (row.match_id >= 577 && row.match_id <= 636) { 
+const fs = require('fs');
+const csv = require('csv-parser');
+
+const calculateExtraRunsIn2016 = (matchesData, deliveriesData) => {
+  const extraRuns = {};
+  const years2016 = matchesData
+    .filter((row) => row.season === '2016')
+    .map((row) => parseInt(row.id, 10));
+  deliveriesData.forEach((row) => {
+    const matchId = parseInt(row.match_id, 10);
+
+    if (years2016.includes(matchId)) {
       const bowlingTeam = row.bowling_team;
       const extraRunsForMatch = parseInt(row.extra_runs);
 
@@ -12,6 +20,8 @@ function calculateExtraRunsIn2016(data) {
       }
     }
   });
+
   return extraRuns;
-}
+};
+
 module.exports = calculateExtraRunsIn2016;

@@ -1,5 +1,13 @@
 const calculateExtraRunsIn2016 = require('../src/server/3-extra-runs-in-2016');
 
+const matchesData =[
+  { id: '536', season:'2017'},
+  { id: '577', season:'2016'},
+  { id: '579', season:'2016'},
+  { id: '581', season:'2016'},
+  { id: '585', season:'2016'},
+  { id: '636', season:'2016'},
+]
 const deliveriesData = [
   { match_id: '577', bowling_team: 'CSK', extra_runs: '5' },
   { match_id: '579', bowling_team: 'MI', extra_runs: '10' },
@@ -9,7 +17,7 @@ const deliveriesData = [
 ];
 
 test('Calculate Extra Runs In 2016', () => {
-  const result = calculateExtraRunsIn2016(deliveriesData);
+  const result = calculateExtraRunsIn2016(matchesData,deliveriesData);
 
   expect(result['CSK']).toBe(13);
   expect(result['MI']).toBe(10);

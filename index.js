@@ -30,7 +30,7 @@ fs.createReadStream(filePath_match)
 
         const result1 = calculateMatchesPerYear(matchesData);
         const result2 = calculateMatchesWonPerTeamPerYear(matchesData);
-        const result3 = calculateExtraRunsIn2016(deliveriesData);
+        const result3 = calculateExtraRunsIn2016(matchesData,deliveriesData);
         const result4 = findTop10EconomicalBowlersIn2015(matchesData, deliveriesData);
         const result5 = getTossWinnerMatchWinner(matchesData);
         const result6 = getPlayerOfTheMatchBySeason(matchesData);
