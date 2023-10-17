@@ -15,6 +15,10 @@ test('get Player of the match by season', () => {
       player_of_match: 'Player B',
     },
     {
+      season: '2015',
+      player_of_match: 'Player A',
+    },
+    {
       season: '2016',
       player_of_match: 'Player A',
     },
@@ -29,7 +33,6 @@ test('get Player of the match by season', () => {
   ];
 
   const result = getPlayerOfTheMatchBySeason(sampleMatchesData);
-
-  expect(result['2015']).toBe('Player B');
+  expect(result['2015']).toBe('Player A');
   expect(result['2016']).toBe('Player C');
 });

@@ -36,7 +36,6 @@ const deliveriesData = [
 test('Find the Top 10 Economical Bowlers in 2015', () => {
   const result = findTop10EconomicalBowlersIn2015(matchesData, deliveriesData);
 
-  console.log(result);
   expect(deliveriesData.length).toBeGreaterThan(10);
 
   expect(result).toHaveLength(10);

@@ -5,7 +5,6 @@ function calculateStrikeRateByBatsman(deliveriesData, matchesData) {
     const season = matchesData.find(match => match.id == delivery.match_id)?.season;
     const batsman = delivery.batsman;
     const runs = parseInt(delivery.batsman_runs);
-    const extras = parseInt(delivery.extra_runs);
     const isWide = delivery.wide_runs > 0;
 
     if (batsman === 'MS Dhoni' && !isWide) {

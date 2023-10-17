@@ -11,7 +11,6 @@ const deliveriesData = [
 
 test('Calculate highest Dismissals', () => {
   const result = getHighestDismissals(deliveriesData);
-  console.log(result);
   expect(result).toEqual({
     mostDismissed: [
       'Player A dismissed by Bowler X',
