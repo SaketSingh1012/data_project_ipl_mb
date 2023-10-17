@@ -58,7 +58,7 @@ fs.createReadStream(filePath_match)
         console.log('Top 10 economical bowlers in the year 2015 data has been generated and saved to public/output/top10EconomicalBowlers2015.json');
         console.log('Number of times each team won the toss and also won the match data has been generated and saved to public/output/tossWinnerMatchWinner.json');
         console.log('Player with the highest number of Player of the Match awards for each season data has been generated and saved to public/output/playerOfTheMatchBySeason.json');
-        console.log('Strike rate of Dhoni for each season data has been generated and saved to public/output/strikeRateByBatsman.json');
+        console.log('Strike rate of a Batsman for each season data has been generated and saved to public/output/strikeRateByBatsman.json');
         console.log('Highest number of times one player has been dismissed by another player data has been generated and saved to public/output/highestDismissals.json');
         console.log('Bowler with the best economy in super overs data has been generated and saved to public/output/bestEconomyInSuperOvers.json');
 
