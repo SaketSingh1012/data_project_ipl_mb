@@ -1,3 +1,4 @@
+/* eslint-disable no-undef */
 const getTossWinnerMatchWinner = require('../src/server/5-toss-winner-match-winner');
 
 test('get Toss Winner-Match Winner', () => {

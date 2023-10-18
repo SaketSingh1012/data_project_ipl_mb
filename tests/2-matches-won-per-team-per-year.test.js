@@ -1,3 +1,4 @@
+/* eslint-disable no-undef */
 const calculateMatchesWonPerTeamPerYear = require('../src/server/2-matches-won-per-team-per-year');
 
 const matchesData = [

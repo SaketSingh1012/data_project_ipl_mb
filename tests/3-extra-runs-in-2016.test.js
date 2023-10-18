@@ -1,3 +1,4 @@
+/* eslint-disable no-undef */
 const calculateExtraRunsIn2016 = require('../src/server/3-extra-runs-in-2016');
 
 const matchesData =[

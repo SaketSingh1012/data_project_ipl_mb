@@ -1,3 +1,4 @@
+/* eslint-disable no-undef */
 const getHighestDismissals = require('../src/server/8-highest-dismissals');
 
 const deliveriesData = [

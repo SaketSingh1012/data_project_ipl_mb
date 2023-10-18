@@ -1,3 +1,4 @@
+/* eslint-disable no-undef */
 const findTop10EconomicalBowlersIn2015 = require('../src/server/4-top-10-economical-bowlers-2015');
 
 const matchesData = [

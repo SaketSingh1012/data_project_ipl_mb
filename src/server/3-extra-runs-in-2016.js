@@ -1,6 +1,3 @@
-const fs = require('fs');
-const csv = require('csv-parser');
-
 const calculateExtraRunsIn2016 = (matchesData, deliveriesData) => {
   const extraRuns = {};
   const years2016 = matchesData

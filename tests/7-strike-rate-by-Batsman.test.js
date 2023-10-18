@@ -1,3 +1,5 @@
+/* eslint-disable no-undef */
+/* eslint-disable no-unused-vars */
 const calculateStrikeRateByBatsman = require('../src/server/7-strike-rate-by-batsman');
 
 const matchesData = [

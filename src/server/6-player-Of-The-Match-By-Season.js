@@ -1,6 +1,3 @@
-const fs = require('fs');
-const csv = require('csv-parser');
-
 function getPlayerOfTheMatchBySeason(data) {
   const playerOfTheMatchBySeason = {};
   const highestPlayerOfTheMatchBySeason = {};

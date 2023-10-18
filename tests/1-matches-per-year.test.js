@@ -1,3 +1,4 @@
+/* eslint-disable no-undef */
 const calculateMatchesPerYear = require('../src/server/1-matches-per-year');
 
 const matchesData = [

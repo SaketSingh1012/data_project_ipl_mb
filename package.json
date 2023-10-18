@@ -7,12 +7,19 @@
     "test": "tests"
   },
   "scripts": {
-    "test": "npx test"
+    "test": "jest --coverage"
   },
   "author": "",
   "license": "ISC",
   "dependencies": {
     "csv-parser": "^3.0.0",
     "jest": "^29.7.0"
+  },
+  "devDependencies": {
+    "eslint": "^8.51.0",
+    "husky": "^8.0.3",
+    "lint-staged": "^15.0.1",
+    "prettier": "^3.0.3"
   }
+
 }

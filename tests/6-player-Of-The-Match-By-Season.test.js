@@ -1,3 +1,4 @@
+/* eslint-disable no-undef */
 const getPlayerOfTheMatchBySeason = require('../src/server/6-player-Of-The-Match-By-Season');
 
 test('get Player of the match by season', () => {

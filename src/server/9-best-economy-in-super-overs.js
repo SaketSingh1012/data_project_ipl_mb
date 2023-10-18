@@ -1,6 +1,3 @@
-const fs = require('fs');
-const csv = require('csv-parser');
-
 function findBestEconomyInSuperOvers(deliveriesData) {
   const superOversData = deliveriesData.filter((delivery) => delivery.is_super_over === '1');
   const bowlerEconomy = {};

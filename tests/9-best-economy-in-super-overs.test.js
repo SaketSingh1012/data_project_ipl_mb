@@ -1,3 +1,4 @@
+/* eslint-disable no-undef */
 const findBestEconomyInSuperOvers = require('../src/server/9-best-economy-in-super-overs');
 
 const deliveriesData = [
