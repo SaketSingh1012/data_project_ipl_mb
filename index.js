@@ -29,7 +29,7 @@ fs.createReadStream(filePath_match)
       })
       .on('end', () => {
 
-        const uniquePlayers = [...new Set(deliveriesData.map(row => row.batsman))];
+        // const uniquePlayers = [...new Set(deliveriesData.map(row => row.batsman))];
 
         const result1 = calculateMatchesPerYear(matchesData);
         const result2 = calculateMatchesWonPerTeamPerYear(matchesData);
