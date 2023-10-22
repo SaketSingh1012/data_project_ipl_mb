@@ -22,7 +22,9 @@ module.exports = {
         "ecmaVersion": "latest"
     },
     globals: {
-        Highcharts: 'readonly', // Add the global variable 'Highcharts'
+        Highcharts: 'readonly',
+        process : 'readonly',
+        __dirname : 'readonly'
       },
     "rules": {
     }

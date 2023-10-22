@@ -4,7 +4,6 @@ function loadJSONData(filePath, callback) {
       .then(data => callback(data))
       .catch(error => console.error('Error loading JSON:', error));
 }
-
 function func_1357(data, containerId, title) {
   Highcharts.chart(containerId, {
     chart: {
