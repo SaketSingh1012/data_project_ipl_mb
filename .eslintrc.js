@@ -21,6 +21,9 @@ module.exports = {
     "parserOptions": {
         "ecmaVersion": "latest"
     },
+    globals: {
+        Highcharts: 'readonly', // Add the global variable 'Highcharts'
+      },
     "rules": {
     }
 }
