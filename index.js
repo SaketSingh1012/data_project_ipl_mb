@@ -30,14 +30,14 @@ fs.createReadStream(filePath_match)
       .on('end', () => {
 
         // const uniquePlayers = [...new Set(deliveriesData.map(row => row.batsman))];
-
         const result1 = calculateMatchesPerYear(matchesData);
         const result2 = calculateMatchesWonPerTeamPerYear(matchesData);
         const result3 = calculateExtraRunsIn2016(matchesData,deliveriesData);
         const result4 = findTop10EconomicalBowlersIn2015(matchesData, deliveriesData);
         const result5 = getTossWinnerMatchWinner(matchesData);
         const result6 = getPlayerOfTheMatchBySeason(matchesData);
-        const result7 = calculateStrikeRateByBatsman(deliveriesData, matchesData);
+        const batsman = "MS Dhoni";
+        const result7 = calculateStrikeRateByBatsman(deliveriesData, matchesData, batsman);
         const result8 = getHighestDismissals(deliveriesData);
         const result9 = findBestEconomyInSuperOvers(deliveriesData);
 

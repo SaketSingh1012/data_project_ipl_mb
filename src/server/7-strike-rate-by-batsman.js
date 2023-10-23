@@ -1,4 +1,4 @@
-function calculateStrikeRateByBatsman(deliveriesData, matchesData) {
+function calculateStrikeRateByBatsman(deliveriesData, matchesData, player) {
   const strikeRateBySeason = {};
 
   deliveriesData.forEach((delivery) => {
@@ -7,7 +7,7 @@ function calculateStrikeRateByBatsman(deliveriesData, matchesData) {
     const runs = parseInt(delivery.batsman_runs);
     const isWide = delivery.wide_runs > 0;
 
-    if (batsman === 'MS Dhoni' && !isWide) {
+    if (batsman === player && !isWide) {
       if (season) {
         if (!strikeRateBySeason[season]) {
           strikeRateBySeason[season] = {

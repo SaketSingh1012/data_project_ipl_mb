@@ -7,7 +7,8 @@
     "test": "tests"
   },
   "scripts": {
-    "test": "jest --coverage"
+    "test": "jest --coverage",
+    "prepare": "husky install"
   },
   "author": "",
   "license": "ISC",
@@ -20,6 +21,16 @@
     "husky": "^8.0.3",
     "lint-staged": "^15.0.1",
     "prettier": "^3.0.3"
+  },
+  "husky": {
+    "hooks": {
+      "pre-commit": "lint-staged"
+    }
+  },
+  "lint-staged": {
+    "*.{js,jsx,json}": [
+      "eslint --fix",
+      "prettier --write"
+    ]
   }
-
 }

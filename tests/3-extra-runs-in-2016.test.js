@@ -19,10 +19,15 @@ const deliveriesData = [
 ];
 
 test('Calculate Extra Runs In 2016', () => {
-  const result = calculateExtraRunsIn2016(matchesData,deliveriesData);
+  const result = calculateExtraRunsIn2016(matchesData, deliveriesData);
 
-  expect(result['CSK']).toBe(13);
-  expect(result['MI']).toBe(10);
-  expect(result['RCB']).toBe(7);
-  expect(result['SRH']).toBe(3);
+  const expectedResults = {
+    'CSK': 13,
+    'MI': 10,
+    'RCB': 7,
+    'SRH': 3,
+  };
+
+  expect(result).toEqual(expectedResults);
 });
+

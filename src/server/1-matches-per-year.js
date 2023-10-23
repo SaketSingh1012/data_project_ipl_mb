@@ -1,7 +1,7 @@
-function calculateMatchesPerYear(data) {
+function calculateMatchesPerYear(matches) {
   const matchesPerYear = {};
-  data.forEach((row) => {
-    const year = row.season;
+  matches.forEach((match) => {
+    const year = match.season;
     if (matchesPerYear[year]) {
       matchesPerYear[year]++;
     } else {

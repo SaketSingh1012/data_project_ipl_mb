@@ -1,33 +1,33 @@
 function getPlayerOfTheMatchBySeason(data) {
-  const playerOfTheMatchBySeason = {};
-  const highestPlayerOfTheMatchBySeason = {};
+  const playerBySeason = {};
+  const highestPlayerBySeason = {};
 
   data.forEach((row) => {
     const season = row.season;
-    const playerOfTheMatch = row.player_of_match;
+    const player = row.player_of_match;
 
-    if (playerOfTheMatch) {
-      if (playerOfTheMatchBySeason[season]) {
-        if (playerOfTheMatchBySeason[season][playerOfTheMatch]) {
-          playerOfTheMatchBySeason[season][playerOfTheMatch]++;
+    if (player) {
+      if (playerBySeason[season]) {
+        if (playerBySeason[season][player]) {
+          playerBySeason[season][player]++;
         } else {
-          playerOfTheMatchBySeason[season][playerOfTheMatch] = 1;
+          playerBySeason[season][player] = 1;
         }
       } else {
-        playerOfTheMatchBySeason[season] = { [playerOfTheMatch]: 1 };
+        playerBySeason[season] = { [player]: 1 };
       }
     }
   });
 
-  for (const season in playerOfTheMatchBySeason) {
-    const players = playerOfTheMatchBySeason[season];
+  for (const season in playerBySeason) {
+    const players = playerBySeason[season];
     const highestPlayer = Object.keys(players).reduce((a, b) => players[a] > players[b] ? a : b);
-    highestPlayerOfTheMatchBySeason[season] = highestPlayer;
+    highestPlayerBySeason[season] = highestPlayer;
   }
 
   const formattedResult = {};
-  for (const season in highestPlayerOfTheMatchBySeason) {
-    const player = highestPlayerOfTheMatchBySeason[season];
+  for (const season in highestPlayerBySeason) {
+    const player = highestPlayerBySeason[season];
     formattedResult[season] = player;
   }
   return formattedResult;

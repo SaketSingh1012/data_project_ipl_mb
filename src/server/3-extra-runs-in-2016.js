@@ -1,12 +1,12 @@
 const calculateExtraRunsIn2016 = (matchesData, deliveriesData) => {
   const extraRuns = {};
-  const years2016 = matchesData
+  const year_2016_data = matchesData
     .filter((row) => row.season === '2016')
     .map((row) => parseInt(row.id, 10));
   deliveriesData.forEach((row) => {
     const matchId = parseInt(row.match_id, 10);
 
-    if (years2016.includes(matchId)) {
+    if (year_2016_data.includes(matchId)) {
       const bowlingTeam = row.bowling_team;
       const extraRunsForMatch = parseInt(row.extra_runs);
 

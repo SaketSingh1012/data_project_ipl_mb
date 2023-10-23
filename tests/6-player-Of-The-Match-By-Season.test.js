@@ -31,9 +31,18 @@ test('get Player of the match by season', () => {
       season:'2016',
       player_of_match: 'Player C'
     },
+    {
+      season:'2017',
+      player_of_match: 'Player C'
+    },
   ];
 
   const result = getPlayerOfTheMatchBySeason(sampleMatchesData);
-  expect(result['2015']).toBe('Player A');
-  expect(result['2016']).toBe('Player C');
+  console.log(result);
+
+  expect(result).toEqual({
+    '2015': 'Player A',
+    '2016': 'Player C',
+    '2017': 'Player C',
+  });
 });
