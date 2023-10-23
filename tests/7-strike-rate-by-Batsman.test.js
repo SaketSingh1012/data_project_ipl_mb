@@ -18,7 +18,6 @@ const deliveriesData = [
 test('Calculate strike rate for a particular player', () => {
   const playerName = 'MS Dhoni';
   const result = calculateStrikeRateByBatsman(deliveriesData, matchesData, playerName);
-  console.log(result);
   const expectedData = {
     '2008': 500.00,
     '2009': 100.00,
