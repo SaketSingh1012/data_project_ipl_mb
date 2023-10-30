@@ -11,22 +11,22 @@ function findBestEconomyInSuperOvers(deliveriesData) {
     const wideRuns = parseInt(delivery.wide_runs, 10);
     const noballRuns = parseInt(delivery.noball_runs, 10);
 
-
-    if (bowler in bowlerEconomy) {
+    if(!bowlerEconomy[bowler]){
+      bowlerEconomy[bowler] = { runs:0, balls: 0 };
+    }
       bowlerEconomy[bowler].runs += runs - legByeRuns - byeRuns - penaltyRuns;
       if (!(wideRuns || noballRuns)) {
         bowlerEconomy[bowler].balls += 1;
       }
-    } else {
-      bowlerEconomy[bowler] = { runs, balls: 1 };
-    }
   });
+  console.log(bowlerEconomy)
 
   for (const bowler in bowlerEconomy) {
     const runs = bowlerEconomy[bowler].runs;
     const balls = bowlerEconomy[bowler].balls;
     bowlerEconomy[bowler].economy = (runs / balls) * 6.0;
   }
+
 
   const bestBowler = Object.keys(bowlerEconomy).reduce((a, b) =>
     bowlerEconomy[a].economy < bowlerEconomy[b].economy ? a : b
