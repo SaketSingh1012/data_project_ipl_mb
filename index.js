@@ -40,7 +40,7 @@ fs.createReadStream(filePath_match)
         const result7 = calculateStrikeRateByBatsman(deliveriesData, matchesData, batsman);
         const result8 = getHighestDismissals(deliveriesData);
         const result9 = findBestEconomyInSuperOvers(deliveriesData);
-
+        
         fs.writeFileSync('./src/public/output/matchesPerYear.json', JSON.stringify(result1, null, 2));
         fs.writeFileSync('./src/public/output/matchesWonPerTeamPerYear.json', JSON.stringify(result2, null, 2));
         fs.writeFileSync('./src/public/output/extraRunsIn2016.json', JSON.stringify(result3, null, 2));

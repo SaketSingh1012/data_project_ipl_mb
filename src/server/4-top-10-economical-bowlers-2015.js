@@ -45,6 +45,7 @@ function findTop10EconomicalBowlersIn2015(matchesData, deliveriesData) {
     }
   }
 
+
   economicalBowlers.sort((a, b) => a.economy - b.economy);
 
   return economicalBowlers.slice(0, 10);
