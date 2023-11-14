@@ -4,7 +4,7 @@ function loadJSONData(filePath, callback) {
       .then(data => callback(data))
       .catch(error => console.error('Error loading JSON:', error));
 }
-function func_1357(data, containerId, title) {
+function func_1(data, containerId, title) {
   Highcharts.chart(containerId, {
     chart: {
       type: 'column'
@@ -65,6 +65,36 @@ function func_1357(data, containerId, title) {
     });
   }
 
+  function func_3(data, containerId, title) {
+    Highcharts.chart(containerId, {
+      chart: {
+        type: 'column'
+      },
+      title: {
+        text: title
+      },
+      xAxis: {
+        categories: Object.keys(data),
+        title: {
+          text: 'Team'
+        }
+      },
+      yAxis: {
+        min: 0,
+        title: {
+          text: 'Total Runs'
+        }
+      },
+      series: [
+        {
+          name: 'Extra Runs',
+          data: Object.values(data)
+        }
+      ]
+    });
+  }
+  
+
 function func_4(data, containerId, title) {
 
     const bowlers = data.map(item => item.bowler);
@@ -97,6 +127,36 @@ function func_4(data, containerId, title) {
       ]
     });
   }
+
+  function func_5(data, containerId, title) {
+    Highcharts.chart(containerId, {
+      chart: {
+        type: 'column'
+      },
+      title: {
+        text: title
+      },
+      xAxis: {
+        categories: Object.keys(data),
+        title: {
+          text: 'No. of Matches Won'
+        }
+      },
+      yAxis: {
+        min: 0,
+        title: {
+          text: 'Toss Winner Match Winner'
+        }
+      },
+      series: [
+        {
+          name: 'Teams',
+          data: Object.values(data)
+        }
+      ]
+    });
+  }
+  
 
   function func_6(data, containerId, title) {
     const years = Object.keys(data);
@@ -136,6 +196,36 @@ function func_4(data, containerId, title) {
       ]
     });
   }
+
+  function func_7(data, containerId, title) {
+    Highcharts.chart(containerId, {
+      chart: {
+        type: 'column'
+      },
+      title: {
+        text: title
+      },
+      xAxis: {
+        categories: Object.keys(data),
+        title: {
+          text: 'Strike Rate of Dhoni'
+        }
+      },
+      yAxis: {
+        min: 0,
+        title: {
+          text: 'Strike Rate'
+        }
+      },
+      series: [
+        {
+          name: 'Year',
+          data: Object.values(data)
+        }
+      ]
+    });
+  }
+  
 
   function func_8(data, containerId, title) {
     const mostDismissed = data.mostDismissed;
@@ -208,7 +298,7 @@ function func_4(data, containerId, title) {
 
 
 loadJSONData('../output/matchesPerYear.json', function (data) {
-    func_1357(data, 'matchesPerYear', 'Matches per Year');
+    func_1(data, 'matchesPerYear', 'Matches per Year');
 });
 
 loadJSONData('../output/matchesWonPerTeamPerYear.json', function (data) {
@@ -216,7 +306,7 @@ loadJSONData('../output/matchesWonPerTeamPerYear.json', function (data) {
 });
 
 loadJSONData('../output/extraRunsIn2016.json', function (data) {
-    func_1357(data, 'extraRunsIn2016', 'Extra Runs In 2016');
+    func_3(data, 'extraRunsIn2016', 'Extra Runs In 2016');
 });
 
 loadJSONData('../output/top10EconomicalBowlers2015.json', function (data) {
@@ -224,7 +314,7 @@ loadJSONData('../output/top10EconomicalBowlers2015.json', function (data) {
 });
 
 loadJSONData('../output/tossWinnerMatchWinner.json', function (data) {
-    func_1357(data, 'tossWinnerMatchWinner', 'Toss Winner Match Winner');
+    func_5(data, 'tossWinnerMatchWinner', 'Toss Winner Match Winner');
 });
 
 loadJSONData('../output/playerOfTheMatchBySeason.json', function (data) {
@@ -232,7 +322,7 @@ loadJSONData('../output/playerOfTheMatchBySeason.json', function (data) {
   });
 
 loadJSONData('../output/strikeRateByBatsman.json', function (data) {
-    func_1357(data, 'strikeRateByBatsman', 'Strike Rate Of MS Dhoni');
+    func_7(data, 'strikeRateByBatsman', 'Strike Rate Of MS Dhoni');
 });
 
 loadJSONData('../output/highestDismissals.json', function (data) {
