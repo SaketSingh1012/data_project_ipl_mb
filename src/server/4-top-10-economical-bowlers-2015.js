@@ -30,6 +30,7 @@ function findTop10EconomicalBowlersIn2015(matchesData, deliveriesData) {
   });
 
   const bowlers = Object.keys(bowlerData);
+
   const economicalBowlers = [];
 
   for (const bowler of bowlers) {
@@ -44,7 +45,6 @@ function findTop10EconomicalBowlersIn2015(matchesData, deliveriesData) {
       });
     }
   }
-
 
   economicalBowlers.sort((a, b) => a.economy - b.economy);
 

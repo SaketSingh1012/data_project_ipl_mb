@@ -10,6 +10,7 @@ const getPlayerOfTheMatchBySeason = require('./src/server/6-player-Of-The-Match-
 const calculateStrikeRateByBatsman = require('./src/server/7-strike-rate-by-batsman');
 const getHighestDismissals = require('./src/server/8-highest-dismissals');
 const findBestEconomyInSuperOvers = require('./src/server/9-best-economy-in-super-overs');
+const findPlayersInAllSeasons = require('./src/server/playersPlayedInAllSeasons');
 
 const filePath_match = './src/data/matches.csv';
 const filePath_delivery = './src/data/deliveries.csv';
@@ -40,7 +41,8 @@ fs.createReadStream(filePath_match)
         const result7 = calculateStrikeRateByBatsman(deliveriesData, matchesData, batsman);
         const result8 = getHighestDismissals(deliveriesData);
         const result9 = findBestEconomyInSuperOvers(deliveriesData);
-        
+        const result10 = findPlayersInAllSeasons(matchesData,deliveriesData);
+        // console.log(result10);
         fs.writeFileSync('./src/public/output/matchesPerYear.json', JSON.stringify(result1, null, 2));
         fs.writeFileSync('./src/public/output/matchesWonPerTeamPerYear.json', JSON.stringify(result2, null, 2));
         fs.writeFileSync('./src/public/output/extraRunsIn2016.json', JSON.stringify(result3, null, 2));

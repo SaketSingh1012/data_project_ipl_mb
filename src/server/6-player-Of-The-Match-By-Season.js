@@ -18,7 +18,6 @@ function getPlayerOfTheMatchBySeason(data) {
       }
     }
   });
-  console.log(playerBySeason)
 
   for (const season in playerBySeason) {
     const players = playerBySeason[season];

@@ -19,7 +19,6 @@ function findBestEconomyInSuperOvers(deliveriesData) {
         bowlerEconomy[bowler].balls += 1;
       }
   });
-  console.log(bowlerEconomy)
 
   for (const bowler in bowlerEconomy) {
     const runs = bowlerEconomy[bowler].runs;
